@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="logo">
+                <a href="index.html">SENU.J</a>
+            </h1>
+            <nav>
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="project1.html">Illini Safe</a></li>
+                    <li><a href="project2.html">Master Chef</a></li>
+                    <li><a href="project3.html">Re-Fabric App</a></li>
+                    <li><a href="project4.html">Project 4</a></li>
+                </ul>
+                <h3>Research</h3>
+                <ul>
+                    <li><a href="research1.html">DINA Model on Rational Knowledge</a></li>
+                </ul>
+                <h3>Gallery</h3>
+                <ul>
+                    <li><a href="gallery1.html">Landscape </a></li>
+                    <li><a href="gallery2.html">Portrait </a></li>
+                </ul>
+                <h3>Info</h3>
+                <ul>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/senuvi/">LinkedIn</a>
+                <a href="https://github.com/senuj05">GitHub</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>PORTFOLIO</h1>
+            <div class="gallery">
+                <div class="gallery-image">
+                    <img src="images/city.jpg" alt="Gallery Image 1">
+                    <img src="images/light.jpg" alt="Gallery Image 2">
+                    <img src="images/water.jpg" alt="Gallery Image 3">
+                    <img src="images/brooklyn.jpg" alt="Gallery Image 4">
+                    <img src="images/nyc.jpg" alt="Gallery Image 5">
+                    <img src="images/ducks.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="gallery-navigation">
+                    <button class="arrow prev" aria-label="Previous Image">&uarr;</button>
+                    <button class="arrow next" aria-label="Next Image">&darr;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const images = document.querySelectorAll('.gallery-image img');
+        const prevButton = document.querySelector('.gallery-navigation .prev');
+        const nextButton = document.querySelector('.gallery-navigation .next');
+
+        let currentIndex = 0;
+
+        function updateGallery() {
+            images.forEach((img, index) => {
+                img.style.display = index === currentIndex ? 'block' : 'none';
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateGallery();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateGallery();
+        });
+
+        // Initialize gallery
+        updateGallery();
+    </script>
+</body>
+</html>
+
