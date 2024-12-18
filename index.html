@@ -23,7 +23,7 @@
                 </ul>
                 <h3>Research</h3>
                 <ul>
-                    <li><a href="research1.html">DINA FOHM on Rational Knowledge</a></li>
+                    <li><a href="research.html">DINA FOHM on Rational Knowledge</a></li>
                 </ul>
                 <h3>Info</h3>
                 <ul>
@@ -45,15 +45,15 @@
 
         <!-- Main Content -->
         <main class="content">
-            <h1>PORTFOLIO</h1>
+            <h1> </h1>
             <div class="gallery">
                 <div class="gallery-image">
-                    <img src="images/city.jpg" alt="Gallery Image 1">
-                    <img src="images/light.jpg" alt="Gallery Image 2">
-                    <img src="images/water.jpg" alt="Gallery Image 3">
-                    <img src="images/brooklyn.jpg" alt="Gallery Image 4">
-                    <img src="images/nyc.jpg" alt="Gallery Image 5">
-                    <img src="images/ducks.jpg" alt="Gallery Image 6">
+                    <!-- <img src="images/city.jpg" alt="Gallery Image 1"> -->
+                    <img src="images/lyt.jpg" alt="Gallery Image 2">
+                    <img src="images/ny.jpg" alt="Gallery Image 3">
+                    <!-- <img src="images/brooklyn.jpg" alt="Gallery Image 4"> -->
+                    <!-- <img src="images/nyc.jpg" alt="Gallery Image 5"> -->
+                    <!-- <img src="images/ducks.jpg" alt="Gallery Image 6"> -->
                 </div>
                 <div class="gallery-navigation">
                     <button class="arrow prev" aria-label="Previous Image">&uarr;</button>
@@ -73,7 +73,7 @@
 
         function updateGallery() {
             images.forEach((img, index) => {
-                img.style.display = index === currentIndex ? 'block' : 'none';
+                img.classList.toggle('active', index === currentIndex);
             });
         }
 
