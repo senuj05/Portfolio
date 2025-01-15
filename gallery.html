@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Biography</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -27,8 +51,8 @@
                 </ul>
                 <h3>Info</h3>
                 <ul>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="cv.html">CV</a></li>
-                    <li><a href="bio.html">Bio</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -41,13 +65,14 @@
 
         <!-- Main Content -->
         <main class="content">
-            <div style="font-family: Arial, sans-serif; margin: 2 auto; max-width: 1000px;">
-                <h1 style="text-align: center; margin-bottom: 100px;">Gallery</h1>
-                <div>
-                    <h2>Snapshots</h2>
-                </div>
+            <div class="gallery-wrapper">
+                <!-- <h1 class="gallery-title">Gallery</h1> -->
+                <h2>Snapshots</h2>
                 <div class="gallery">
-                    
+                    <div class="gallery-item"><img src="images/brooklyn.jpg" alt="Gallery Image 1"></div>
+                    <div class="gallery-item"><img src="images/city.jpg" alt="Gallery Image 2"></div>
+                    <div class="gallery-item"><img src="images/light.jpg" alt="Gallery Image 3"></div>
+                    <div class="gallery-item"><img src="images/nyc.jpg" alt="Gallery Image 4"></div>
                 </div>
             </div>
         </main>
