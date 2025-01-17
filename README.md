@@ -1,2 +1,2 @@
 Portfolio
-![Project Screenshot](images/p1.png)
+![Project Screenshot](/p1.png)
